@@ -1,3 +1,9 @@
+.news{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px;
+}
+
 .news__item {
     display: flex;
     flex-direction: column;
@@ -9,6 +15,9 @@
     font-family: Arial, sans-serif;
     border-radius: 5px;
     overflow: hidden;
+    border: solid 2px #44b78b;
+    max-width: 810px;
+    margin: 10px;
 }
 
 .news__item:hover .news__meta-photo {
@@ -78,7 +87,7 @@
 }
 
 .news__item .news__description .news__read-more a {
-    color: #5ad67d;
+    color: #44b78b;
     display: inline-block;
     position: relative;
     text-decoration: none;
@@ -111,7 +120,7 @@
     content: '';
     position: absolute;
     height: 5px;
-    background: #5ad67d;
+    background: #44b78b;
     width: 35px;
     top: -0.75rem;
     border-radius: 3px;
