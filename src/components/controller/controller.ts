@@ -2,6 +2,7 @@ import { IData } from '../app/interfaces';
 import AppLoader from './appLoader';
 
 class AppController extends AppLoader {
+
     public getSources(callback: (data: IData) => void): void {
         super.getResp(
             {

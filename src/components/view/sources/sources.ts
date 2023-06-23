@@ -3,6 +3,7 @@ import { ISource } from '../../app/interfaces';
 
 class Sources {
     public draw(data: ISource[]): void {
+
         const fragment: DocumentFragment = document.createDocumentFragment();
         const sourceItemTemp: HTMLTemplateElement = document.querySelector('#sourceItemTemp') as HTMLTemplateElement;
 
@@ -17,6 +18,7 @@ class Sources {
 
         (document.querySelector('.sources') as HTMLElement).append(fragment);
     }
+
 }
 
 export default Sources;

@@ -1,6 +1,6 @@
 export interface IData {
-        sources: ISource[];
-        articles: IArticle[];
+    sources: ISource[];
+    articles: IArticle[];
 }
 
 export interface ISource {

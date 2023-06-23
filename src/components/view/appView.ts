@@ -3,8 +3,8 @@ import Sources from './sources/sources';
 import { IData, ISource, IArticle } from '../app/interfaces';
 
 export class AppView {
-    private news;
-    private sources;
+    private news: News;
+    private sources: Sources;
 
     constructor() {
         this.news = new News();
@@ -12,7 +12,7 @@ export class AppView {
     }
 
     public drawNews(data: IData): void {
-        const values: IArticle[] = data?.articles ? data?.articles: [];
+        const values: IArticle[] = data?.articles ? data?.articles : [];
         this.news.draw(values);
     }
 

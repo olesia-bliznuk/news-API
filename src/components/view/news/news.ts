@@ -7,7 +7,6 @@ class News {
         const fragment: DocumentFragment = document.createDocumentFragment();
         const newsItemTemp: HTMLTemplateElement = document.querySelector('#newsItemTemp') as HTMLTemplateElement;
         news.forEach((item, idx) => {
-
             const newsClone: HTMLElement = newsItemTemp.content.cloneNode(true) as HTMLElement;
             if (idx % 2)
                 (newsClone.querySelector('.news__item') as HTMLElement)
@@ -19,10 +18,10 @@ class News {
                 .textContent = item.author || item.source.name;
             (newsClone.querySelector('.news__meta-date') as HTMLElement)
                 .textContent = item.publishedAt
-                .slice(0, 10)
-                .split('-')
-                .reverse()
-                .join('-');
+                    .slice(0, 10)
+                    .split('-')
+                    .reverse()
+                    .join('-');
             (newsClone.querySelector('.news__description-title') as HTMLElement)
                 .textContent = item.title;
             (newsClone.querySelector('.news__description-source') as HTMLElement)
@@ -33,7 +32,6 @@ class News {
                 .setAttribute('href', item.url);
 
             fragment.append(newsClone);
-
         });
 
         const newsElement = document.querySelector('.news') as HTMLElement;
